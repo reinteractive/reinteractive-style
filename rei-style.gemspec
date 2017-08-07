@@ -7,10 +7,10 @@ require "rei/style/version"
 Gem::Specification.new do |spec|
   spec.name          = "rei-style"
   spec.version       = Rei::Style::VERSION
-  spec.authors       = ["ReInteractive"]
+  spec.authors       = ["reinteractive"]
   spec.email         = ["team@reinteractive.com"]
 
-  spec.summary       = "ReInteractive style guides and shared configs"
+  spec.summary       = "reinteractive shared style configurations"
   spec.homepage      = "https://github.com/reinteractive/rei-style"
   spec.license       = "MIT"
 
