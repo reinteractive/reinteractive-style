@@ -1,6 +1,6 @@
 # rei-style
 
-ReInteractive internal shared style configurations.
+reinteractive internal shared style configurations.
 
 ## Installation
 
