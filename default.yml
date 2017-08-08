@@ -1076,3 +1076,6 @@ Rails/Delegate:
 Security/Eval:
   Description: The use of eval represents a serious security risk.
   Enabled: true
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*"
