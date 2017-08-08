@@ -1,6 +1,6 @@
 # reinteractive-style
 
-reinteractive internal shared style configurations.
+Our internal Ruby code style configurations, enforced by Rubocop.
 
 ## Installation
 
@@ -8,7 +8,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 group :development do
-  gem "reinteractive-style", git: "https://github.com/reinteractive/reinteractive-style"
+  gem "reinteractive-style"
 end
 ```
 
@@ -27,8 +27,8 @@ inherit_gem:
 ```
 
 There's no need to add the `rubocop` gem to your project's `Gemfile`; `rubocop`
-is a dependency of `reinteractive-style`, to ensure we use a consistent minimum version
-across all of our projects.
+is a dependency of `reinteractive-style`, to ensure we use a consistent minimum
+version across all of our projects.
 
 ## Credits
 
