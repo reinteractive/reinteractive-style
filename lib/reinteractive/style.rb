@@ -1,6 +1,6 @@
-require "rei/style/version"
+require "reinteractive/style/version"
 
-module Rei
+module Reinteractive
   module Style
     # Nothing to see here... Move along!
   end

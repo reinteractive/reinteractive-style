@@ -2,16 +2,16 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "rei/style/version"
+require "reinteractive/style/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "rei-style"
-  spec.version       = Rei::Style::VERSION
+  spec.name          = "reinteractive-style"
+  spec.version       = Reinteractive::Style::VERSION
   spec.authors       = ["reinteractive"]
   spec.email         = ["team@reinteractive.com"]
 
   spec.summary       = "reinteractive shared style configurations"
-  spec.homepage      = "https://github.com/reinteractive/rei-style"
+  spec.homepage      = "https://github.com/reinteractive/reinteractive-style"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the
