@@ -1079,3 +1079,6 @@ Security/Eval:
 Lint/AmbiguousBlockAssociation:
   Exclude:
     - "spec/**/*"
+RSpec/LetSetup:
+  Description: Using let! in configuration is not a bad thing if well structured
+  Enabled: false
