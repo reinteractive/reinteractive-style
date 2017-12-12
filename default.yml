@@ -1074,3 +1074,6 @@ Lint/AmbiguousBlockAssociation:
 RSpec/LetSetup:
   Description: Using let! in configuration is not a bad thing if well structured
   Enabled: false
+RSpec/MultipleExpectations:
+  Description: Multiple expectations in a spec are fine if used with caution
+  Enabled: false
