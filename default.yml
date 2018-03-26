@@ -1,10 +1,12 @@
 require: rubocop-rspec
 
 AllCops:
+  DisplayCopNames: true
   Include:
     - "**/**/*.rake"
     - "**/Gemfile"
     - "**/Rakefile"
+    - '**/config.ru'
   Exclude:
     - "vendor/**/*"
     - "db/**/*"
@@ -277,22 +279,40 @@ Style/SymbolProc:
   Enabled: true
   IgnoredMethods:
   - respond_to
-Style/TrailingCommaInLiteral:
-  Description: Checks for trailing comma in parameter lists and literals.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas
-  Enabled: true
-  EnforcedStyleForMultiline: comma
-  SupportedStylesForMultiline:
-  - comma
-  - no_comma
+
 Style/TrailingCommaInArguments:
-  Description: Checks for trailing comma in parameter lists and literals.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas
-  Enabled: true
+  # If `comma`, the cop requires a comma after the last argument, but only for
+  # parenthesized method calls where each argument is on its own line.
+  # If `consistent_comma`, the cop requires a comma after the last argument,
+  # for all parenthesized method calls with arguments.
   EnforcedStyleForMultiline: comma
   SupportedStylesForMultiline:
-  - comma
-  - no_comma
+    - comma
+    - consistent_comma
+    - no_comma
+
+Style/TrailingCommaInArrayLiteral:
+  # If `comma`, the cop requires a comma after the last item in an array,
+  # but only when each item is on its own line.
+  # If `consistent_comma`, the cop requires a comma after the last item of all
+  # non-empty array literals.
+  EnforcedStyleForMultiline: comma
+  SupportedStylesForMultiline:
+    - comma
+    - consistent_comma
+    - no_comma
+
+Style/TrailingCommaInHashLiteral:
+  # If `comma`, the cop requires a comma after the last item in a hash,
+  # but only when each item is on its own line.
+  # If `consistent_comma`, the cop requires a comma after the last item of all
+  # non-empty hash literals.
+  EnforcedStyleForMultiline: comma
+  SupportedStylesForMultiline:
+    - comma
+    - consistent_comma
+    - no_comma
+
 Style/TrivialAccessors:
   Description: Prefer attr_* methods to trivial readers/writers.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#attr_family
@@ -392,14 +412,14 @@ Lint/AssignmentInCondition:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#safe-assignment-in-condition
   Enabled: false
   AllowSafeAssignment: true
-Lint/EndAlignment:
+Layout/EndAlignment:
   Description: Align ends correctly.
   Enabled: true
   EnforcedStyleAlignWith: keyword
   SupportedStylesAlignWith:
   - keyword
   - variable
-Lint/DefEndAlignment:
+Layout/DefEndAlignment:
   Description: Align ends corresponding to defs correctly.
   Enabled: true
   EnforcedStyleAlignWith: start_of_line
@@ -966,10 +986,10 @@ Lint/AmbiguousRegexpLiteral:
   Description: Checks for ambiguous regexp literals in the first argument of a method
     invocation without parenthesis.
   Enabled: false
-Lint/BlockAlignment:
+Layout/BlockAlignment:
   Description: Align block ends correctly.
   Enabled: true
-Lint/ConditionPosition:
+Layout/ConditionPosition:
   Description: Checks for condition placed in a confusing position relative to the
     keyword.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#same-line-condition
