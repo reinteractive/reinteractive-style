@@ -1,5 +1,5 @@
 module Reinteractive
   module Style
-    VERSION = "0.2.6".freeze
+    VERSION = "0.2.5".freeze
   end
 end
