@@ -5,6 +5,7 @@ AllCops:
     - "**/**/*.rake"
     - "**/Gemfile"
     - "**/Rakefile"
+    - '**/config.ru'
   Exclude:
     - "vendor/**/*"
     - "db/**/*"
