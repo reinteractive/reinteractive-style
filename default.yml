@@ -564,7 +564,7 @@ Style/EvenOdd:
   Description: Favor the use of Fixnum#even? && Fixnum#odd?
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#predicate-methods
   Enabled: false
-Style/FlipFlop:
+Lint/FlipFlop:
   Description: Checks for flip flops
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-flip-flops
   Enabled: false
@@ -767,7 +767,7 @@ Layout/EmptyLinesAroundModuleBody:
   SupportedStyles:
   - empty_lines
   - no_empty_lines
-Layout/FirstParameterIndentation:
+Layout/IndentFirstArgument:
   Description: Checks the indentation of the first parameter in a method call.
   Enabled: true
   EnforcedStyle: special_for_inner_method_call_in_parentheses
@@ -780,7 +780,7 @@ Layout/IndentationWidth:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-indentation
   Enabled: true
   Width: 2
-Layout/IndentHash:
+Layout/IndentFirstHashElement:
   Description: Checks the indentation of the first key in a hash literal.
   Enabled: true
   EnforcedStyle: special_inside_parentheses
@@ -885,7 +885,7 @@ Layout/EndOfLine:
 Layout/IndentationConsistency:
   Description: Keep indentation straight.
   Enabled: true
-Layout/IndentArray:
+Layout/IndentFirstArrayElement:
   Description: Checks the indentation of the first element in an array literal.
   Enabled: true
 Layout/LeadingCommentSpace:
