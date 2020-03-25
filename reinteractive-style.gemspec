@@ -1,4 +1,4 @@
-lib = File.expand_path("../lib", __FILE__)
+lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "reinteractive/style/version"
 
@@ -30,6 +30,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "rubocop", "~> 0.57"
+  spec.add_dependency "rubocop-rails", "~> 2.5"
   spec.add_dependency "rubocop-rspec", "~> 1.24"
 
   spec.add_development_dependency "bundler", "~> 1.16"
